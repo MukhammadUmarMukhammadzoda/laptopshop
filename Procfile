@@ -1,0 +1,1 @@
+web: gunicorn noutuz.wsgi --log-file -
