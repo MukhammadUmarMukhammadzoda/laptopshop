@@ -1,0 +1,109 @@
+{% extends 'header.html'  %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+ {% block content %}
+<body>
+      <div class="Wrapper_Block">
+            <div class="Laptop_Name">
+                 {% for b in brand  %}
+            
+            <a href="{% url 'brand'  b.name  %}"class="btn"><img src="{{b.img.url}}" alt=""></a>
+            
+               {% endfor  %}
+            </div> 
+            </div>
+
+
+      <h6 style="margin-left: 2rem;">We have {{total}} items </h6>
+<img src="laptop.jpg" alt="" class="img2">
+<div class="Title">
+      {% if i3 %}
+      <h1>Laptops for  Сore i3</h1>
+ </div>
+ <div class="LaptopBlockName">             {% for ii3 in i3 %}
+
+       <div class="KupitBlock">
+            <img src="{{ii3.img.url}}" alt=""> 
+            <div class="Pavilon2">
+                    <a href="{% url 'review' ii3.id %}" > {{ii3.model}}</a>
+            </div>
+          
+            <p>{{ii3.display_size}}" Full HD {{ii3.display_type}} | Intel® Core™ {{ii3.CPU}}| {{ii3.RAM}}GB| {{ii3.Hard}}| {{ii3.GPU}}|</p>
+            <h2 class="sum">{{ii3.price}}$</h2>
+            <button type="button" class="button"> 
+                  <a href="https://telegram.me/Developer_MM">Order by Telegram</a>
+            </button> 
+            <div class="подробнее">
+                  <a href="{% url 'review' ii3.id %}" >View Product</a>
+            </div> 
+       </div>
+            {% endfor %}
+
+ </div> 
+   {% endif %}
+
+   {% if i5 %}
+<div class="Title">
+      <h1>Core i5 Laptops</h1>
+ </div>
+ <div class="LaptopBlockName">
+      {% for ii3 in i5 %}
+
+      <div class="KupitBlock">
+           <img src="{{ii3.img.url}}" alt=""> 
+           <div class="Pavilon2">
+                   <a href="{% url 'review' ii3.id %}" > {{ii3.model}}</a>
+           </div>
+         
+           <p>{{ii3.display_size}}" Full HD {{ii3.display_type}} | Intel® Core™ {{ii3.CPU}}| {{ii3.RAM}}GB| {{ii3.Hard}}| {{ii3.GPU}}|</p>
+           <h2 class="sum">{{ii3.price}}$</h2>
+           <button type="button" class="button"> 
+                 <a href="https://telegram.me/Developer_MM">Order by Telegram</a>
+           </button> 
+           <div class="подробнее">
+                 <a href="{% url 'review' ii3.id %}" >View Product</a>
+           </div> 
+      </div>
+           {% endfor %}
+      
+      
+ </div> 
+ {% endif %}
+ 
+ {% if i7 %}
+<div class="Title">
+      <h1>Laptops Сore i7 </h1>
+ </div>
+ <div class="LaptopBlockName">
+      {% for ii3 in i7 %}
+
+      <div class="KupitBlock">
+           <img src="{{ii3.img.url}}" alt=""> 
+           <div class="Pavilon2">
+                   <a href="{% url 'review' ii3.id %}" > {{ii3.model}}</a>
+           </div>
+         
+           <p>{{ii3.display_size}}" Full HD {{ii3.display_type}} | Intel® Core™ {{ii3.CPU}}| {{ii3.RAM}}GB| {{ii3.Hard}}| {{ii3.GPU}}|</p>
+           <h2 class="sum">{{ii3.price}}$</h2>
+           <button type="button" class="button"> 
+                 <a href="https://telegram.me/Developer_MM">Order by Telegram</a>
+           </button> 
+           <div class="подробнее">
+                 <a href="{% url 'review' ii3.id %}" >View Product</a>
+           </div> 
+      </div>
+           {% endfor %}
+
+      
+      
+ </div>
+ {% endif %} 
+      </div>
+     
+</body>
+{% endblock %}
+</html>
+</html>
+</html>

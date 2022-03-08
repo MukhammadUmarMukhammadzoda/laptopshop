@@ -1,0 +1,187 @@
+{% extends 'header.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+{% block content %}
+<body>
+
+       <div class="Wrapper_Block">
+              <div class="Laptop_Name">
+                   {% for b in brand  %}
+              
+              <a href="{% url 'brand'  b.name  %}"class="btn"><img src="{{b.img.url}}" alt=""></a>
+              
+                 {% endfor  %}
+              </div> 
+              </div>
+  
+       <div  class="index2_Wrapper">
+                 <div class="index2_Block">
+                           <img src="{{ product.img.url }}" alt="">
+                           <div class="index2_Block_sum">
+                                    <h2>{{product.model}} ({{product.CPU}})</h2>
+                           <h1>{{product.price}}$</h1>
+                           <p>{{product.display_size}}″ Full HD {{product.display_type}} |
+                              Intel® Core™ {{product.CPU}}|  {{product.RAM}}GB DDR4| {{product.Hard}} SSD|{{product.GPU}}|</p>
+                              <button type="button" > <a href="https://telegram.me/Developer_MM">Order by Telegram</a></button>    
+                           </div>
+                         
+                 </div>
+                 <div class="index2_товара">
+                           <h1>Specification of Product</h1>
+
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Display	</h3>
+                                     <p class="name">{{product.display_size}}″ FullHD {{product.display_type}} Anti-Glare 250Nits
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Processor	</h3>
+                                     <p class="name">{{product.CPU}}
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>RAM	</h3>
+                                     <p class="name">{{product.RAM}} GB DDR4
+
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Hard Disc	
+                              </h3>
+                                     <p class="name">	
+                                        {{product.Hard}} PCIe® NVMe™ M.2 SSD
+                                        
+
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>GPU		
+                              </h3>
+                                     <p class="name">{{product.GPU}}
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Courpus			
+                              </h3>
+                                     <p class="name">	                     {{product.courpus}}
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Colour			
+                              </h3>
+                                     <p class="name">	                     {{product.colour}}
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Wireless-Network				
+                              </h3>
+                                     <p class="name">	                     Intel® Wireless-AC 9461 802.11a/b/g/n/ac (1×1) Wi-Fi® и Bluetooth® 5
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Ports				
+                              </h3>
+                                     <p class="name">	                     SuperSpeed USB Type-C® HDMI, Thunderbolt USB type-A 3.2
+
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Audio				
+                              </h3>
+                                     <p class="name">	                     Audio from {{product.Audio}}; Dual speakers
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Web-Cam				
+                              </h3>
+                                     <p class="name">	                      Wide Vision HD Camera 
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Keyboard				
+                              </h3>
+                                     <p class="name">	                     ENG/RU
+
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Battery				
+                              </h3>
+                                     <p class="name">	                    {{product.Batarey}}MAH
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Guarantee				
+                              </h3>
+                                     <p class="name">	                     1 Year
+
+                              </p>
+
+                           </div>
+                 </div>
+                 <div class="Block_index2_wrapper">
+                           <div class="bloc_index2">
+                                     <h3>Model					
+                              </h3>
+                                     <p class="name">	                  {{product.model}}
+
+
+                              </p>
+
+                           </div>
+                 </div>
+       </div>   
+</body>
+{% endblock %}
+</html>
